@@ -1,7 +1,8 @@
 from app import app, db
 from app.models import User
 from ont_mapping import Ontology, dfs_edges
-
+import nltk
+nltk.download('stopwords')
 
 @app.shell_context_processor
 def make_shell_context():
