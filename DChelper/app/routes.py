@@ -45,7 +45,7 @@ def make_tree():
     query_processors[current_user.username] = QueryProcessor(ont)
     ontologies[current_user.username] = ont
     init_node = ont.select_nodes('node.name == "init"')[0]
-    tree_roots_edges = dfs_edges(init_node, passing_out=['descend'])
+    tree_roots_edges = dfs_edges(init_node, passing_out=[''])
     res = []
     for edge in tree_roots_edges:
         root = edge.dest
